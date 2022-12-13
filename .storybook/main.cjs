@@ -23,8 +23,8 @@ module.exports = {
     return mergeConfig(config, {
       resolve: {
         alias: [
-          { find: '@', replacement: __dirname + '../src' },
-          { find: 'src', replacement: __dirname + '../src' },
+          { find: '@', replacement: __dirname + '/../src' },
+          { find: 'src', replacement: __dirname + '/../src' },
         ],
       },
     });
