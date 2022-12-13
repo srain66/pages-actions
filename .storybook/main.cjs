@@ -22,7 +22,7 @@ module.exports = {
   },
   async viteFinal(config, { configType }) {
     return mergeConfig(config, {
-      base: import.meta.VITE_GH_PAGES_URL || config.base,
+      base: process.env.VITE_GH_PAGES_URL || config.base,
       resolve: {
         alias: [
           { find: '@', replacement: resolve(__dirname, '../src') },
