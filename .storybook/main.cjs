@@ -21,6 +21,7 @@ module.exports = {
     },
   },
   async viteFinal(config, { configType }) {
+    console.log(config);
     return mergeConfig(config, {
       resolve: {
         alias: [
