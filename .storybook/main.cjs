@@ -20,9 +20,9 @@ module.exports = {
       disable: true,
     },
   },
+  staticDirs: [{ from: '/assets', to: '/pages-actions/assets' }],
   async viteFinal(config, { configType }) {
     return mergeConfig(config, {
-      publicPath: '/pages-actions/',
       resolve: {
         alias: [
           { find: '@', replacement: resolve(__dirname, '../src') },
