@@ -21,11 +21,8 @@ module.exports = {
     },
   },
   async viteFinal(config, { configType }) {
-    console.log(config);
     return mergeConfig(config, {
-      site: {
-        baseUrl: '/pages-actions',
-      },
+      base: process.env.BASE_PATH || config.base,
       resolve: {
         alias: [
           { find: '@', replacement: resolve(__dirname, '../src') },
